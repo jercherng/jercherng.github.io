@@ -20,8 +20,8 @@ var params = {
     z: 10
 };
 
-var Lighting = gui.addFolder("Lighting");
 var Materials = gui.addFolder("Materials");
+var Lighting = gui.addFolder("Lighting");
 
 var diffuseMaterial = Materials.addColor( params, 'diffuse' ).name('Diffuse').listen();
 diffuseMaterial.onChange(function(value) {

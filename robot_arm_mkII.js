@@ -104,19 +104,19 @@ var guiX = Lighting.add(params, 'x', -100, 100).listen();
 var guiY = Lighting.add(params, 'y', -100, 100).listen();
 var guiZ = Lighting.add(params, 'z', -100, 100).listen();
 guiX.onChange(function(value) {
-   var light = eval("spotLight" + params.light);
+    var light = eval("spotLight" + params.light);
     var spot = eval("spot" + params.light);
     spot.position.x = value;
     light.position.x = value;
 });
 guiY.onChange(function(value) {
-   var light = eval("spotLight" + params.light);
+    var light = eval("spotLight" + params.light);
     var spot = eval("spot" + params.light);
     spot.position.y = value;
     light.position.y = value;
 });
 guiZ.onChange(function(value) {
-   var light = eval("spotLight" + params.light);
+    var light = eval("spotLight" + params.light);
     var spot = eval("spot" + params.light);
     spot.position.z = value;
     light.position.z = value;
@@ -125,7 +125,8 @@ guiZ.onChange(function(value) {
 // choose index of the light source
 var lightNumber = Lighting.add( params, 'light', [ "1", "2", "3" ] ).name('Light #').listen();
 lightNumber.onChange(function(value) 
-{   var light = eval("spotLight" + value);
+{   
+    var light = eval("spotLight" + value);
     var spot = eval("spot" + value);
     params.diffuseColor = spot.material.color.getHexString();
     params.x = spot.position.x;

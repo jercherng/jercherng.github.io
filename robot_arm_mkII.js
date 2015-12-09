@@ -20,8 +20,9 @@ var params = {  // parameters of GUI
     z: 10
 };
 
-var Lighting = gui.addFolder("Lighting");
+// add materials and lighting folder to gui 
 var Materials = gui.addFolder("Materials");
+var Lighting = gui.addFolder("Lighting");
 
 // add palette and its event listener
 var diffuseMaterial = Materials.addColor( params, 'diffuse' ).name('Diffuse').listen();
@@ -376,6 +377,7 @@ function animate() {
     requestAnimationFrame( animate );
     render();
 }
+
 function render() {
     B.rotation.y = params.B;
     C.rotation.y = params.C;
